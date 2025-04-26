@@ -12,19 +12,21 @@ private:
 	
 	//vector <pieces> piecesOnTheBoard
 	
+	//texture initialization here
+	sf::Texture boardTexture;
+	sf::Sprite boardSprite;
+
+	sf::Texture wPawnTexture;
+
+	//Piece initialization here
 	Pawn wp1;
-
-
 
 	//array of pieces currently on the board
 	std::vector<Piece> piecesOnTheBoard;
 
-	sf::Texture boardTexture;
-	sf::Sprite boardSprite;
-
-
 public:
-	Board();
+	//pass all the textures when you init board
+	Board(sf::Texture* boardTexture, sf::Texture* wPawnTexture /*more textures pls*/);
 	~Board();
 	void overwriteBoardSpace(int cord, char label);
 	void displayBoard();

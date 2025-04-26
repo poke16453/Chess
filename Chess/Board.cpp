@@ -1,8 +1,13 @@
 #include "Board.h"
 
-Board::Board() : boardTexture("C:\\Users\\jacob\\Desktop\\ChessRes\\ChessBoard.png"), boardSprite(boardTexture) {
+Board::Board(sf::Texture* boardTexture, sf::Texture* wPawnTexture) : 
+boardTexture(*boardTexture),
+boardSprite(*boardTexture),
+wPawnTexture(*wPawnTexture), 
+wp1(48, 'p', wPawnTexture) {
+
 	//pieces definition
-	wp1 = Pawn(48, 'p');
+	//wp1 = Pawn(48, 'p', &wPawnTexture);
 };
 
 Board::~Board() {

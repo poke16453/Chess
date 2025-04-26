@@ -5,11 +5,8 @@ class Pawn: public Piece
 {
 public:
 	Pawn();
-	Pawn(int cord, char label);
+	Pawn(int cord, char label, sf::Texture* pieceTexture);
 	int* getValidMoveLocations() override;
-
-	sf::Texture pawnTexture;
-	sf::Sprite pawnSprite;
 
 private:
 

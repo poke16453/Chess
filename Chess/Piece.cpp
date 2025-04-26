@@ -1,17 +1,12 @@
 #include "Piece.h"
-Piece::Piece()
+Piece::Piece(char label, int cord, sf::Texture pieceTexture) : pieceSprite(pieceTexture)
 {
-
-}
-
-Piece::Piece(int cord)
-{
-	//this->pieceTexture = sf::Texture("C:\\Users\\jacob\\Desktop\\ChessRes\\ChessBoard.png");
-	//this->pieceSprite = sf::Sprite(pieceTexture);
+	this->label = label;
 	this->cord = cord;
+	this->preformedSpecialMove = false;
+	this->onFirstTurn = true;
 }
 
 int* Piece::getValidMoveLocations() {
-	int test = -1;
-	return &test;
+	return nullptr;
 }
