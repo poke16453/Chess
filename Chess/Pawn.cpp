@@ -1,13 +1,7 @@
 #include "Pawn.h"
-
-Pawn::Pawn() {
-
-}
-
-Pawn::Pawn(int cord, char label) : pawnTexture("C:\\Users\\jacob\\Desktop\\ChessRes\\Pawn.png"), pawnSprite(pawnTexture)
+Pawn::Pawn(int cord, char label, sf::Texture* pawnTexture) : Piece(cord, label, *pawnTexture)
 {
-	this->cord = cord;
-	this->label = label;
+
 }
 
 

@@ -10,8 +10,12 @@
 //4/10/25 - Implemented basic pawn class and some of the foundations
 #include <iostream>
 #include "Game.h"
-Game game = Game();
 
+//textures initialization
+sf::Texture bPawnTexture = sf::Texture("C:\\Users\\ander\\Desktop\\black-pawn-d7aeaeC-600.jpg");
+sf::Texture boardTexture = sf::Texture("C:\\Users\\ander\\Desktop\\black-pawn-d7aeaeC-600.jpg");
+
+Game game = Game(&boardTexture, &bPawnTexture);
 
 int main()
 {

@@ -4,8 +4,7 @@
 class Piece
 {
 public:
-	Piece();
-	Piece(int cord);
+	Piece(char label, int cord, sf::Texture pieceTexture);
 	
 	//label is string for the board
 	char label;
@@ -13,9 +12,12 @@ public:
 	bool preformedSpecialMove = false;
 	bool onFirstTurn = true;
 
-	//a fuction that returns an array of valid locations
+	//a function that returns an array of valid locations
 	//the piece can move to
 	virtual int* getValidMoveLocations();
+
+	sf::Texture pieceTexture;
+	sf::Sprite pieceSprite;
 	
 
 private:
