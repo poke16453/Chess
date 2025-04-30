@@ -12,14 +12,24 @@
 #include "Game.h"
 
 //textures initialization
-sf::Texture bPawnTexture = sf::Texture("C:\\Users\\ander\\Desktop\\black-pawn-d7aeaeC-600.jpg");
-sf::Texture boardTexture = sf::Texture("C:\\Users\\ander\\Desktop\\black-pawn-d7aeaeC-600.jpg");
+sf::Texture bPawnTexture = sf::Texture("C:\\Users\\jacob\\Desktop\\ChessRes\\Pawn.png");
+sf::Texture boardTexture = sf::Texture("C:\\Users\\jacob\\Desktop\\ChessRes\\ChessBoard.png");
 
 Game game = Game(&boardTexture, &bPawnTexture);
 
+
+//OBJECTIVES FOR CODING SESSION 4/29/25
+//1. figure out how to display a image on a square on the chess board
+//2. figure out how to get the users clicks
+
 int main()
 {
-    game.draw();
+    int* cords = game.board.turnArrayIndexIntoScreenCordinates(i);
+    game.board.drawImageOnScreen(cords[0], cords[1], game.board.)
+
+    printf("%d %d\n", cords[0], cords[1]);
+
+    //game.draw();
     //for (int i = 0; i < 7; i++) {
     //    //the variable name of an array in C++ is a POINTER to the first element
     //    board.overwriteBoardSpace(game.piecesOnTheBoard[i]->cord, game.piecesOnTheBoard[i]->label);

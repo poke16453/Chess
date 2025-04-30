@@ -50,3 +50,39 @@ void Board::displayBoard() {
 void Board::drawBoardToScreen(sf::RenderWindow* window) {
 	window->draw(boardSprite);
 }
+
+
+/// <summary>
+/// take in an array index and determines the cordinates of the piece on the screen
+/// </summary>
+int* Board::turnArrayIndexIntoScreenCordinates(int index) {
+	//0->63
+	//spit out (x, y)
+	
+	int x = 0;
+	int y = 0;
+
+	for (int i = 0; i < 63; i++) {
+		
+		if (i == index) {
+			break;
+		}
+		
+		x += 80;
+		
+		if (x > 560) {
+			x = 0;
+			y += 80;
+		}
+	}
+	int cords[2]{};
+	cords[0] = x;
+	cords[1] = y;
+	return cords;
+}
+
+//draw image on board square???
+void Board::drawImageOnScreen(sf::RenderWindow* window, int x, int y, sf::Sprite sprite) {
+	sprite.setPosition({ (float)x, (float)y});
+	window->draw(sprite);
+}

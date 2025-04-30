@@ -31,7 +31,8 @@ public:
 	void overwriteBoardSpace(int cord, char label);
 	void displayBoard();
 	void drawBoardToScreen(sf::RenderWindow* window);
-
+	int* turnArrayIndexIntoScreenCordinates(int index);
+	void drawImageOnScreen(sf::RenderWindow* window, int x, int y, sf::Sprite sprite);
 
 private:
 
