@@ -24,10 +24,10 @@ Game game = Game(&boardTexture, &bPawnTexture);
 
 int main()
 {
-    int* cords = game.board.turnArrayIndexIntoScreenCordinates(i);
-    game.board.drawImageOnScreen(cords[0], cords[1], game.board.)
-
-    printf("%d %d\n", cords[0], cords[1]);
+    //bool check = bPawnTexture.loadFromFile("C:\\Users\\jacob\\Desktop\\ChessRes\\Pawn.png");
+    //game.board.drawImageOnScreen(&game.window, cords[0], cords[1], game.board.boardSprite);
+    game.draw();
+    //printf("%d %d\n", cords[0], cords[1]);
 
     //game.draw();
     //for (int i = 0; i < 7; i++) {

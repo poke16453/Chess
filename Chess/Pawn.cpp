@@ -1,5 +1,6 @@
 #include "Pawn.h"
-Pawn::Pawn(int cord, char label, sf::Texture* pawnTexture) : Piece(cord, label, *pawnTexture)
+Pawn::Pawn(int cord, char label, sf::Texture* pawnTexture) : 
+Piece(cord, label, pawnTexture)
 {
 
 }

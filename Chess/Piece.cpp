@@ -1,5 +1,5 @@
 #include "Piece.h"
-Piece::Piece(char label, int cord, sf::Texture pieceTexture) : pieceSprite(pieceTexture)
+Piece::Piece(char label, int cord, sf::Texture* pieceTexture) : pieceSprite(*pieceTexture)
 {
 	this->label = label;
 	this->cord = cord;

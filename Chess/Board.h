@@ -7,8 +7,8 @@
 
 class Board
 {
-private:
-	std::string board = "0000000000000000000000000000000000000000000000000000000000000000";
+public:
+	std::string board = "00000000pppppppp00000000000000000000000000000000pppppppp00000000";
 	
 	//vector <pieces> piecesOnTheBoard
 	
@@ -19,20 +19,28 @@ private:
 	sf::Texture wPawnTexture;
 
 	//Piece initialization here
-	Pawn wp1;
-
+	Pawn bp1;
+	Pawn bp2;
+	Pawn bp3;
+	Pawn bp4;
+	Pawn bp5;
+	Pawn bp6;
+	Pawn bp7;
+	Pawn bp8;
+	
 	//array of pieces currently on the board
 	std::vector<Piece> piecesOnTheBoard;
 
-public:
 	//pass all the textures when you init board
 	Board(sf::Texture* boardTexture, sf::Texture* wPawnTexture /*more textures pls*/);
 	~Board();
 	void overwriteBoardSpace(int cord, char label);
 	void displayBoard();
 	void drawBoardToScreen(sf::RenderWindow* window);
+
+	void initializeBoardFromArray(std::string boardString);
 	int* turnArrayIndexIntoScreenCordinates(int index);
-	void drawImageOnScreen(sf::RenderWindow* window, int x, int y, sf::Sprite sprite);
+	void drawImageOnScreen(sf::RenderWindow* window, int x, int y, Piece piece);
 
 private:
 

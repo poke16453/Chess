@@ -4,11 +4,11 @@
 class Piece
 {
 public:
-	Piece(char label, int cord, sf::Texture pieceTexture);
+	Piece(char label, int cord, sf::Texture* pieceTexture);
 	
 	//label is string for the board
 	char label;
-	int cord = -1;
+	int cord;
 	bool preformedSpecialMove = false;
 	bool onFirstTurn = true;
 
